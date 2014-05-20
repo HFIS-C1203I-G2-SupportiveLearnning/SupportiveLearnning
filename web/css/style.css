@@ -1,0 +1,35 @@
+@import 'control.css';
+@import 'layout.css';
+@import 'menu.css';
+*{
+    font-size: 12px;  
+    font-family: verdana; 
+}
+table{  
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+}
+th,td{  
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    padding: 5px;
+}
+th {
+    background: #ccc;    
+    color: #111;
+    font-weight: bold;
+    height: 20px;
+    padding: 5px;
+}
+a, a:visited {
+    color: #2969c9;
+    border: 0px;
+    text-decoration: none;
+}
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+li{
+    color: red;
+}

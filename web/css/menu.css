@@ -1,0 +1,22 @@
+#menu ul{
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+#menu a{
+    font-weight: bold;
+    float: left;
+    text-decoration: none;
+    color: white;
+    background-color: #055;
+    padding:  10px 10px;
+    border-right: 1px solid white;
+}
+#menu a:hover {
+    background-color: #ff3300;
+}
+#menu li {
+    display: inline;
+}

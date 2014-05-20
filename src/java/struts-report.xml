@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="user" extends="struts-default">
+        <action name="preReportStudent" class="controller.report.ReportStudent" method="preReportStudent">
+            <result name="success">/adv/report/report-student.jsp</result>
+            <result name="error">/adv/report/report-student.jsp</result>      
+        </action>
+        <action name="reportStudent" class="controller.report.ReportStudent" method="reportStudent">
+            <result name="success">/adv/report/report-student.jsp</result>
+            <result name="error">/adv/report/report-student.jsp</result>      
+        </action>
+        <action name="changeObjective" class="controller.report.ReportStudent" method="changeObjective">
+            <result name="success">/adv/report/report-student.jsp</result>
+            <result name="error">/adv/report/report-student.jsp</result>      
+        </action>
+    </package>
+</struts>
