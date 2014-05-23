@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class ObjectiveObj {
     private int objId;
     private String objName;

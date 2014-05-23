@@ -10,10 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.OldAssignmentModel;
 
-/**
- *
- * @author MyPC
- */
+
 public class PreListAssignment extends ActionSupport {
 
     private List<Assignment> assignments;

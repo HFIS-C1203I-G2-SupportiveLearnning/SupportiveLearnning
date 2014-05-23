@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class User {
     private int userId;
 

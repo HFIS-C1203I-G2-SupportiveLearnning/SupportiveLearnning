@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class Role {
     private int roleId;
     private String name;

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : composeReceiver
-    Created on : Jan 15, 2014, 9:57:12 AM
-    Author     : MyPC
---%>
+
 
 <%@page import="entity.Role"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

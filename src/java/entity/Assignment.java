@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class Assignment {
     public static final String DEFAULT_PATH = "/assignment/";
     

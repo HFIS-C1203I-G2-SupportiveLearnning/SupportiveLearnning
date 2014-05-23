@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class ClassObj {
     private String classname;
     private String staffId;

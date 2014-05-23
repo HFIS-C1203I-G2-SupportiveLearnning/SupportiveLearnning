@@ -7,10 +7,7 @@ package controller.assignment;
 import com.opensymphony.xwork2.ActionSupport;
 import entity.Assignment;
 
-/**
- *
- * @author MyPC
- */
+
 public class PreCreateAssignment extends ActionSupport {
 
     private Assignment assignment;

@@ -16,10 +16,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import util.MyDate;
 
-/**
- *
- * @author MyPC
- */
+
 public class CreateAssignment extends ActionSupport implements ServletRequestAware{
 
     private HttpServletRequest servletRequest;

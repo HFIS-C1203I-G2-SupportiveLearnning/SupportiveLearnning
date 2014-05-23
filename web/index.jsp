@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : Jan 15, 2014, 7:54:25 PM
-    Author     : MyPC
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

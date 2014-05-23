@@ -9,10 +9,7 @@ import entity.ClassObj;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-/**
- *
- * @author MyPC
- */
+
 public class ClassModel extends CommonModel {
     public List<ClassObj> getAll() {
         List<ClassObj> items = null;

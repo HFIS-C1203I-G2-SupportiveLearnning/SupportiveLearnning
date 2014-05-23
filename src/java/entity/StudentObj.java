@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class StudentObj {
     private String rollNo;
     private String password;
@@ -17,6 +14,8 @@ public class StudentObj {
     private String address;
     private float mark;
     private String strMark;
+    private int submitted;
+    private int pass;
 
     public StudentObj() {
     }
@@ -93,6 +92,23 @@ public class StudentObj {
     public void setStrMark(String strMark) {
         this.strMark = strMark;
     }
+
+    public int getSubmitted() {
+        return submitted;
+    }
+
+    public void setSubmitted(int submitted) {
+        this.submitted = submitted;
+    }
+
+    public int getPass() {
+        return pass;
+    }
+
+    public void setPass(int pass) {
+        this.pass = pass;
+    }
+
     
     
 }

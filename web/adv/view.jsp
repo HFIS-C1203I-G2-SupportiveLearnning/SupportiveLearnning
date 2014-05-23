@@ -1,8 +1,4 @@
-<%-- 
-    Document   : view-user
-    Created on : Jan 11, 2014, 2:35:42 AM
-    Author     : TuanAnhIT
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>
@@ -11,7 +7,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Supportive Learning - Administrator Page</title>
     </head>
     <body>
         <div class="main">

@@ -9,7 +9,6 @@ import entity.User;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-
 public class OldAssignmentModel extends CommonModel {
 
     public List<Assignment> getAll() {

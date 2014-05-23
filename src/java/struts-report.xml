@@ -6,17 +6,31 @@
 
 <struts>
     <package name="user" extends="struts-default">
-        <action name="preReportStudent" class="controller.report.ReportStudent" method="preReportStudent">
-            <result name="success">/adv/report/report-student.jsp</result>
-            <result name="error">/adv/report/report-student.jsp</result>      
+        <action name="preReportBySubmitted" class="controller.report.ReportStudent" method="preReportBySubmitted">
+            <result name="success">/adv/report/report-student-submitted.jsp</result>
+            <result name="error">/adv/report/report-student-submitted.jsp</result>      
         </action>
-        <action name="reportStudent" class="controller.report.ReportStudent" method="reportStudent">
-            <result name="success">/adv/report/report-student.jsp</result>
-            <result name="error">/adv/report/report-student.jsp</result>      
+        <action name="reportBySubmitted" class="controller.report.ReportStudent" method="reportBySubmitted">
+            <result name="success">/adv/report/report-student-submitted.jsp</result>
+            <result name="error">/adv/report/report-student-submitted.jsp</result>      
         </action>
-        <action name="changeObjective" class="controller.report.ReportStudent" method="changeObjective">
-            <result name="success">/adv/report/report-student.jsp</result>
-            <result name="error">/adv/report/report-student.jsp</result>      
+        
+        <action name="preReportByMark" class="controller.report.ReportStudent" method="preReportByMark">
+            <result name="success">/adv/report/report-student-mark.jsp</result>
+            <result name="error">/adv/report/report-student-mark.jsp</result>      
+        </action>
+        <action name="reportByMark" class="controller.report.ReportStudent" method="reportByMark">
+            <result name="success">/adv/report/report-student-mark.jsp</result>
+            <result name="error">/adv/report/report-student-mark.jsp</result>      
+        </action>
+        
+        <action name="preReportByType" class="controller.report.ReportStudent" method="preReportByType">
+            <result name="success">/adv/report/report-student-type.jsp</result>
+            <result name="error">/adv/report/report-student-type.jsp</result>      
+        </action>
+        <action name="reportByType" class="controller.report.ReportStudent" method="reportByType">
+            <result name="success">/adv/report/report-student-type.jsp</result>
+            <result name="error">/adv/report/report-student-type.jsp</result>      
         </action>
     </package>
 </struts>

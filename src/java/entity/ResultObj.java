@@ -4,10 +4,7 @@
  */
 package entity;
 
-/**
- *
- * @author MyPC
- */
+
 public class ResultObj {
     private String rollNo;
     private int asmId;
