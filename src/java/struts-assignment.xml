@@ -5,20 +5,27 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <package name="user" extends="struts-default">
-        <action name="preCreateAssignment" class="controller.assignment.PreCreateAssignment">
-            <result name="success">/adv/assignment/create-assignment.jsp</result>
-            <result name="error">/error.jsp</result>      
+    <package name="assignment" extends="struts-default">
+        <action name="preCreateAssignment" class="controller.assignment.ManageAssignment" method="preCreateAssignment">
+            <result name="success">/adv/assignment/create-assignment.jsp</result>  
         </action>
         
-        <action name="createAssignment" class="controller.assignment.CreateAssignment">
+        <action name="saveAssignment" class="controller.assignment.ManageAssignment" method="saveAssignment">
+            <result name="success">/adv/assignment/waiting-list-assignment.jsp</result>  
+            <result name="error">/adv/assignment/create-assignment.jsp</result>  
+        </action>
+        
+        <action name="listAssignment" class="controller.assignment.ManageAssignment" method="listAssignment">
+            <result name="success">/adv/assignment/list-assignment.jsp</result>  
+        </action>
+        
+        <action name="preCreateNewTopic" class="controller.topic.ManageTopic" method="preCreateTopic">
+            <result name="success">/adv/assignment/create-topic.jsp</result>  
+        </action>
+        
+        <action name="createNewTopic" class="controller.topic.ManageTopic" method="saveTopic"> 
             <result name="success">/adv/assignment/waiting-process.jsp</result>
-            <result name="error">/adv/assignment/create-assignment.jsp</result>      
-        </action>
-        
-        <action name="preListAssignment" class="controller.assignment.PreListAssignment">
-            <result name="success">/adv/assignment/list-assignment.jsp</result>
-            <result name="error">/error.jsp</result>      
+            <result name="error">/adv/assignment/create-topic.jsp</result>
         </action>
     </package>
 </struts>

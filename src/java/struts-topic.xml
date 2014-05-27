@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="topic" extends="struts-default">
+        <action name="preCreateTopic" class="controller.topic.ManageTopic" method="preCreateTopic">
+            <result name="success">/adv/topic/create-topic.jsp</result>  
+        </action>
+        
+        <action name="saveTopic" class="controller.topic.ManageTopic" method="saveTopic"> 
+            <result name="success">/adv/topic/waiting-process.jsp</result>
+            <result name="error">/adv/topic/create-topic.jsp</result>
+        </action>
+        
+        <action name="viewTopic" class="controller.topic.ManageTopic" method="viewTopic">
+            <result name="success">/adv/topic/view-topic.jsp</result>  
+        </action>
+        
+        <action name="deleteTopic" class="controller.topic.ManageTopic" method="deleteTopic"> 
+            <result name="success">/adv/topic/waiting-process.jsp</result>
+            <result name="error">/adv/topic/list-topic.jsp</result>
+        </action>
+        
+        <action name="listTopic" class="controller.topic.ManageTopic" method="listTopic"> 
+            <result name="success">/adv/topic/list-topic.jsp</result>    
+        </action>
+    </package>
+</struts>

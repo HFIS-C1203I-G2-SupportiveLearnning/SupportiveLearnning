@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : view-user
+    Created on : Jan 11, 2014, 2:35:42 AM
+    Author     : MinhPC
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="s" uri="/struts-tags" %>

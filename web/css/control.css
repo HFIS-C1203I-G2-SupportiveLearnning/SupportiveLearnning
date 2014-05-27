@@ -2,12 +2,13 @@
     width: 8%;
     height: 30px;
     padding: 5px;
-    background: #055;
+    background: #002A68;
     color: #fff;
+    font-size: 13px;
 }
 .button:hover{
     text-decoration: none;
-    background-color: #ff3300;
+    background-color: #0299D6;
     cursor: pointer;
     color: #fff;
 }

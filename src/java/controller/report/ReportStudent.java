@@ -136,6 +136,7 @@ public class ReportStudent extends ActionSupport {
         }
     }
     
+    
     public String preReportByType() {
         List<ClassObj> lstClass = mdClass.getAll();
         List<ObjectiveObj> lstObjective = mdObjective.getAll();
@@ -221,6 +222,18 @@ public class ReportStudent extends ActionSupport {
                     }
                 }
             }
+        }
+        
+        return SUCCESS;
+    }
+    
+    public String markByMark(){
+        preReportByMark();
+        
+        boolean check = true;
+        
+        if(check){
+            students = mdReport.getStudentByMark(clo.getClassname(), ojto.getObjId(), tpo.getTopicId(), -1);
         }
         
         return SUCCESS;

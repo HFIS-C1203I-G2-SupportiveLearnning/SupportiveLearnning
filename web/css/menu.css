@@ -1,5 +1,5 @@
 .drop_menu {
-    background:#055;
+    background:#002A68;
     padding:0;
     margin:0;
     list-style-type:none;
@@ -14,7 +14,7 @@
     display:block;
     color:#fff;
     text-decoration:none;
-    font:12px arial, verdana, sans-serif;
+    font-size: 13px;
 }
 
 /* Submenu */
@@ -26,23 +26,22 @@
 }
 .drop_menu li:hover { 
     position:relative; 
-    background:#055; 
-    background-color: #f30;
+    background:#0299D6; 
 }
 .drop_menu li:hover ul {
     left:0px;
-    top:30px;
+    top:32px;
     padding:0px;
 }
 
 .drop_menu li:hover ul li a {
     padding:5px;
     display:block;
-    width:169px;
+    width:210px;
     text-indent:15px;
-    background-color: #055;
+    background-color: #002A68;
     border-top: 1px solid #ddd;
 }
 .drop_menu li:hover ul li a:hover { 
-    background:#f30; 
+    background:#0299D6; 
 }

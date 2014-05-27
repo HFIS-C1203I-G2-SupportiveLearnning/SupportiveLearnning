@@ -4,7 +4,7 @@
  */
 package model;
 
-import entity.Assignment;
+import entity.AssignmentObj;
 import entity.ClassObj;
 import entity.ObjectiveObj;
 import entity.StudentObj;
@@ -14,9 +14,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
-import util.MyDate;
 
 
 public class CommonModel {
@@ -24,7 +24,7 @@ public class CommonModel {
     
     public void connect() throws Exception{
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433; database=SupportiveLearningDB2", "sa", "123456");
+        con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433; database=SupportiveLearningDB", "sa", "123456");
     }
     
     public void close() throws SQLException{
@@ -41,21 +41,20 @@ public class CommonModel {
         this.con = con;
     }
     
-    public List<Assignment> getAssignmentTable(PreparedStatement pre) {
-        List<Assignment> items = new LinkedList<Assignment>();
+    public List<AssignmentObj> getAssignmentTable(PreparedStatement pre, boolean inner) {
+        List<AssignmentObj> items = new LinkedList<AssignmentObj>();
         try {
             ResultSet rs = pre.executeQuery();
             if (rs != null) {
                 while (rs.next()) {
-                    Assignment item = new Assignment();
-                    item.setAssignmentId(rs.getInt("assignment_id"));
-                    item.setSubject(rs.getString("subject"));
-                    item.setFileName(rs.getString("file_name"));
-                    item.setPath(rs.getString("path"));
-                    item.setSize(rs.getLong("size"));
-                    item.setTotalMark(rs.getByte("total_mark"));
-                    item.setDeadline(MyDate.formatDate("dd/MM/yyyy", rs.getTimestamp("deadline")));
-                    item.setUserId(rs.getInt("user_id"));
+                    AssignmentObj item = new AssignmentObj();
+                    item.setAsmId(rs.getInt("asm_id"));
+                    item.setTopicId(rs.getInt("topic_id"));
+                    item.setClassname(rs.getString("classname"));
+                    item.setDeadline(new SimpleDateFormat("dd/MM/yyyy").format(rs.getTimestamp("deadline")));
+                    if(inner){
+                        item.setName(rs.getString("name"));
+                    }
                     items.add(item);
                 }
             }
@@ -102,7 +101,7 @@ public class CommonModel {
         return items;
     }
     
-    public List<TopicObj> getTopicTable(PreparedStatement pre) {
+    public List<TopicObj> getTopicTable(PreparedStatement pre, boolean join) {
         List<TopicObj> items = new LinkedList<TopicObj>();
         try {
             ResultSet rs = pre.executeQuery();
@@ -114,6 +113,9 @@ public class CommonModel {
                     item.setFileName(rs.getString("filename"));
                     item.setPath(rs.getString("path"));
                     item.setObjId(rs.getInt("obj_id"));
+                    if(join){
+                        item.setObjName(rs.getString("obj_name"));
+                    }
                     items.add(item);
                 }
             }

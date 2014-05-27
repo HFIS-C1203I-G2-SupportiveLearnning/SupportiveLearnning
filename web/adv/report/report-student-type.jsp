@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : composeReceiver
+    Created on : Jan 15, 2014, 9:57:12 AM
+    Author     : MyPC
+--%>
 
 <%@page import="entity.Role"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -40,9 +44,9 @@
                     </s:form>
                 </div>
                 
-                <div class="new" style="margin-left: 25%;" >
-                    <h2><i>Summary</i></h2>
-                    <table cellspacing="0" cellpadding="0" width="60%">
+                <div class="new">
+                    <h2>Summary</h2>
+                    <table cellspacing="0" cellpadding="0" width="100%">
                         <tr>
                             <th>Type</th>
                             <th width="40%">Number student</th>
@@ -59,6 +63,7 @@
                 </div>
                 
                 <div class="new">
+                    <h2>List Detail</h2>
                     <table cellspacing="0" cellpadding="0" width="100%">
                         <tr>
                             <th width="3%">Index</th>

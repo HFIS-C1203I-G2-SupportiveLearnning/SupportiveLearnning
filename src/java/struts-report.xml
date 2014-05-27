@@ -5,7 +5,7 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <package name="user" extends="struts-default">
+    <package name="report" extends="struts-default">
         <action name="preReportBySubmitted" class="controller.report.ReportStudent" method="preReportBySubmitted">
             <result name="success">/adv/report/report-student-submitted.jsp</result>
             <result name="error">/adv/report/report-student-submitted.jsp</result>      

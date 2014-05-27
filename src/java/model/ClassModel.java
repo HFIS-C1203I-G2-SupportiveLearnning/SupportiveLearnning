@@ -4,7 +4,6 @@
  */
 package model;
 
-import entity.Assignment;
 import entity.ClassObj;
 import java.sql.PreparedStatement;
 import java.util.List;

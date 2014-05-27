@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="result" extends="struts-default">
+        <action name="preMarkByMark" class="controller.report.ReportStudent" method="preReportByMark">
+            <result name="success">/adv/result/mark-result.jsp</result>
+            <result name="error">/adv/result/mark-result.jsp</result>      
+        </action>
+        <action name="markByMark" class="controller.report.ReportStudent" method="markByMark">
+            <result name="success">/adv/result/mark-result.jsp</result>
+            <result name="error">/adv/result/mark-result.jsp</result>      
+        </action>
+    </package>
+</struts>

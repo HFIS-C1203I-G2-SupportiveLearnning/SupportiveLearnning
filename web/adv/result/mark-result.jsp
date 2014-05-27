@@ -16,7 +16,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Statistics Student By Mark</title>
+        <title>Mark Student</title>
         <script type="text/javascript">
             function handleChange(){
                 window.location="changeObjective.action"; 
@@ -30,52 +30,31 @@
             
             <div id="body">
                 <div>
-                    <s:actionerror/>
+                    <%--<s:actionerror/>--%>
                 </div>
                 
                 <div>
-                    <s:form action="reportByMark.action" method="POST">
+                    <s:form action="markByMark.action" method="POST">
                         <table cellspacing="0" cellpadding="0" width="100%">
                             <s:select label="Class" list="mClass" name="clo.classname" value="%{clo.classname}" cssClass="select"/>
                             <s:select label="Objective" list="mObjective" name="ojto.objId" value="%{ojto.objId}" cssClass="select" />
                             <s:select label="Topic" list="mTopic" name="tpo.topicId" value="%{tpo.topicId}" cssClass="select"/>
-                            <s:textfield label="Over Mark" name="stdo.strMark" value="%{stdo.strMark}" cssClass="textfield" />
+                            <s:hidden name="stdo.strMark" value="-1" />
                             
-                            <s:submit value="Statistics" cssClass="button"/>
+                            <s:submit value="Search" cssClass="button"/>
                         </table>
                     </s:form>
                 </div>
-                
-                <br/>
-                
-                <div class="new" >
-                    <h2>Summary</h2>
-                    <table cellspacing="0" cellpadding="0" width="100%">
-                        <tr>
-                            <th>Mark</th>
-                            <th width="40%">Number student</th>
-                            <th>Percent</th>
-                        </tr>
-                        <s:iterator value="mMarkStatistics">
-                            <tr>
-                                <td><b>${key}</b></td>
-                                <td><b>${value.value1} </b></td>
-                                <td><b>${value.value2} %</b></td>
-                            </tr>
-                        </s:iterator>
-                    </table>
-                </div>
-                
+                                
                 <div class="new">
-                    <h2>List Detail</h2>
                     <table cellspacing="0" cellpadding="0" width="100%">
                         <tr>
                             <th width="3%">Index</th>
                             <th>Class</th>
-                            <th>RollNo</th>
+                            <th>Topic</th>
+                            <th>Roll No</th>
                             <th>Full Name</th>
-                            <th>Email</th>
-                            <th>Mark</th>   
+                            <th width="3%">Mark</th>   
                         </tr>
                         <%
                             int i = 1;
@@ -84,10 +63,10 @@
                             <tr>
                                 <td><%=i++%></td>
                                 <td>${classname}</td>
+                                <td>${topicName}</td>
                                 <td>${rollNo}</td>
                                 <td>${fullName}</td>
-                                <td>${email}</td>
-                                <td>${mark}</td>
+                                <td><s:a href="#" onclick="return prompt('Please enter mark', '')"><img src="img/mark.png" alt="Mark Result" /></s:a></td>
                             </tr>
                         </s:iterator>
                     </table>

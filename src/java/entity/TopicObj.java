@@ -6,11 +6,14 @@ package entity;
 
 
 public class TopicObj {
+    public static final String DEFAULT_PATH = "/data/topic/";
+    
     private int topicId;
     private String name;
     private String fileName;
     private String path;
     private int objId;
+    private String objName;
 
     public TopicObj() {
     }
@@ -62,6 +65,15 @@ public class TopicObj {
     public void setObjId(int objId) {
         this.objId = objId;
     }
+
+    public String getObjName() {
+        return objName;
+    }
+
+    public void setObjName(String objName) {
+        this.objName = objName;
+    }
+    
     
     
 }

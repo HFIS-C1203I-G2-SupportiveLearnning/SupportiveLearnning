@@ -1,19 +1,20 @@
 *{
-    margin: 0px
+    margin: 0px;
+    font: 12px arial, verdana, sans-serif;
 }
 #header{
-    background-image:url('../img/header-img.jpg');
-    width: auto;
-    height: 50px;
+    background-image: url('../img/header-img.jpg');
     margin: 1px;
-    color: #4d9200;
+    color: #C0DFF3;
     font-weight: bold;
-    padding-left: 2%;
+    font-family: Georgia, Serif;
+    font-size: large;
+    padding: 20px;
 }
 #menu{
     width: auto;
     height: 34px;
-    background: #055;
+    background: #002A68;
     margin: 1px;
 }
 #body{
@@ -33,6 +34,6 @@
     border: 1px solid #aaa;
 }
 .new{
-    margin-top: 2px;
+    margin-top: 10px;
     margin-bottom: 2px;
 }

@@ -9,8 +9,10 @@
     <constant name="struts.multipart.maxSize" value="1000000" />
     
     <include file="struts-default.xml"/>
-    <!--<include file="struts-assignment.xml"/>-->
     <include file="struts-report.xml"/>
+    <include file="struts-topic.xml"/>
+    <include file="struts-assignment.xml"/>
+    <include file="struts-result.xml"/>
     
     
     <package name="default" extends="struts-default">
